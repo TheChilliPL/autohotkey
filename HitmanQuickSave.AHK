@@ -19,7 +19,7 @@
 ;===============================================================================
 ; Made in 2023 by Chilli.
 ; GitHub:   TheChilliPL
-; Discord:  @Chilli#2077
+; Discord:  @chilli2077
 ;===============================================================================
 
 #Requires AutoHotkey v2.0
@@ -86,7 +86,7 @@ WaitUntil(Predicate, Timeout := 0, Delay := 100, DelayMult := 1)
 
         PredRes := Predicate()
 
-        if(PredRes)
+        if (PredRes)
             return true
     }
     return false
