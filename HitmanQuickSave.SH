@@ -25,7 +25,7 @@
 
 # --- Config ---
 # Color of the selected UI elements
-BRAND_COLOR="#FB0014"
+BRAND_COLOR="#FB0019"
 # Position of the main menu header
 MENU_BRAND_POS=(400 100)
 # Position of the save button
@@ -76,6 +76,7 @@ function is_brand {
     local y="$2"
 
     pixel_color=$(grim -g "$x,$y 1x1" - | magick - -format "#%[hex:u.p{0,0}]" info:)
+    echo "Detected pixel color: $pixel_color, brand color: $BRAND_COLOR"
     [[ $pixel_color == "$BRAND_COLOR" ]]
 }
 
